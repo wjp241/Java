@@ -48,3 +48,4 @@
 - declare variables outside of scopes
 
   #### Why?
+  - to prevent extra declaration in every loop
