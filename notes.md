@@ -1,5 +1,14 @@
 # Java
 
+# Overall Process
+
+1. Compilation
+   - Developer writes a human-readable program in .java file.
+   - Compiler compiles .java file to a machine-readable bytecode file in a .class format.   
+   - Compilation catches mistakes before computer does any execution at all.
+2. Interpretation & Execution
+   - Java virtual machine executes the bytecode file OS independently.  
+
 ## Casting(Data Type Transformation)
 
 - Manual casting is necessary:
@@ -41,7 +50,7 @@
        int   long  --> long
        long  float  --> float
        char  char  --> int
-    
+
 
 ### Variable Declaration&&Loops (For/While)
 
