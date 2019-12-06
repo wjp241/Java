@@ -3,11 +3,38 @@
 # Overall Process
 
 1. Compilation
+
    - Developer writes a human-readable program in .java file.
    - Compiler compiles .java file to a machine-readable bytecode file in a .class format.   
    - Compilation catches mistakes before computer does any execution at all.
+
 2. Interpretation & Execution
-   - Java virtual machine executes the bytecode file OS independently.  
+
+   - Java virtual machine executes the bytecode file OS independently.
+
+     
+
+# public static void main(string args[]) Explanation
+
+#### Public
+
+Public means that this Method will be accessible by any Class(If other Classes can access this  Class.).
+
+#### Static
+
+It means the  given Method or variable is not instance-related but Class related. It  can be accessed without creating the instance of a Class.
+
+#### Void
+
+It defines what the  method can return. Void means the Method will not return any value.
+
+#### main
+
+This Method name is searched by JVM as a starting point for an application with a particular signature only.
+
+#### String args[] / String… args
+
+It is the parameter to the main method. The argument name could be anything.
 
 ## Casting(Data Type Transformation)
 
