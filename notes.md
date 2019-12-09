@@ -83,6 +83,12 @@
 
 # OOP
 
+## 객체의 구성요소
+
+1. 속성 Property == 멤버변수 Member Variable == 특성 attribute == 필드 field == 상태 state
+
+2. 기능 function == 메서드 method == 함수 function == 행위 behavior
+
 ### Methods
 
 #### Static(Class) vs Instance Method
@@ -116,7 +122,43 @@ Okay, what is constructor
 - Cool Facts
   - it's possible to have multiple constructors
   - when one constructor calls another constructor, it must be done with this keyword like this: 
-    - this(type var, type var2)...
+    - this(type var, type var2)..
+
+
+
+# Array(배열)
+
+다차원 (Multidimensional)
+
+행 (Row) + 열 (Column)
+
+Ex
+
+```
+[[1,2,3],[4,5,6],[7,8,9]]
+
+```
+
+array[0] = 행
+
+array [0] [1] = 열
+
+가변 배열 Variable Length Array
+
+Ex
+
+```
+int[][] score = new int[5][];
+score[0] = new int[4];
+score[1] = new int[3];
+score[1] = new int[2];
+score[1] = new int[2];
+score[1] = new int[3];
+
+
+```
+
+
 
 
 
