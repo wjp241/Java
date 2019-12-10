@@ -23,7 +23,7 @@ public class Exercise1 {
 		String sumStr = "ÇÕ°è : " + sum;
 		String avgStr = "Æò±Õ : " + avg;
 		String resultStr = sumStr + "\n" + avgStr; 
-//		System.out.println(resultStr);
+		System.out.println(resultStr);
 		
 	}
 
