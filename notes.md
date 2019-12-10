@@ -49,7 +49,7 @@
          (2)      (4)   (8)     (4)      (8)
        
        l-value = r-value
-       
+     
        double = int
        long = char
        int = (int)double   
@@ -80,6 +80,36 @@
 
   #### Why?
   - to prevent extra declaration in every loop
+
+# printf()
+
+EX.
+
+``` System.out.printf("age:%d", age) -> "age:14"``` 
+
+#### Remember:
+
+- For creating a new line, it is better to use '%n' than '\n' as it may print differently across different Oss.
+
+Ex.
+
+``` System.out.printf("age:%d%n", age); -> 출력후 줄바꿈을 한다.```
+
+### What the heck is?
+
+Ex.
+
+``` System.outprintf("finger = [%5d] %n", finger); -> finger = [  10]```
+
+@들어갈 십진법 정수의 수는 5개이다. 맨오른쪽으로 밀어쓴다. 빈공간은 띄어쓰기로 채운다. 이경우는 3개!
+
+``` System.out.printf("finger=[%-5d]%n", finger); -> finger = [10   ]```
+
+@왼쪽 줄맞춤해라. 들어갈 십진법 정수의 수는 5개이다. 빈공간은 띄어쓰기로 채운다.
+
+``` System.out.printf("finger = [%05d] %n", finger) -> finger =[00010] ```
+
+@왼쪽 줄맞춤해라. 5개의 십진법 정수가 들어간다. 빈공간은 0으로 채운다
 
 # OOP
 
@@ -124,8 +154,6 @@ Okay, what is constructor
   - when one constructor calls another constructor, it must be done with this keyword like this: 
     - this(type var, type var2)..
 
-
-
 # Array(배열)
 
 다차원 (Multidimensional)
@@ -136,7 +164,6 @@ Ex
 
 ```
 [[1,2,3],[4,5,6],[7,8,9]]
-
 ```
 
 array[0] = 행
@@ -147,18 +174,56 @@ array [0] [1] = 열
 
 Ex
 
-```
+```java
 int[][] score = new int[5][];
 score[0] = new int[4];
 score[1] = new int[3];
 score[1] = new int[2];
 score[1] = new int[2];
 score[1] = new int[3];
-
-
 ```
 
+# Lambda
 
+One actually useful example to answer the question: "How does function/method parameters work in Java?" :
 
+``` java
+interface MyFunction {
+	void run();
+}
 
+public class lambda {
+	
+	static void execute(MyFunction f) {
+		f.run();
+	}
+	
+	static MyFunction getMyFunction() {
+		MyFunction f = () -> System.out.println("f3.run()");
+		return f;
+	}
+	
+        public static void main(String[] args) {
+        	
+        	MyFunction f1 = () -> System.out.println("f1.run()");
+        	
+        	MyFunction f2 = new MyFunction() {
+        		public void run() {
+        			System.out.println("f2.run()");
+        		}
+        	};
+        	
+        	MyFunction f3 = getMyFunction();
+        	
+        	f1.run();
+        	f2.run();
+        	f3.run();
+        	
+        	execute(f1);
+        	execute( ()-> System.out.println("run()"));
+        	
+      }
+        
+}
+```
 
