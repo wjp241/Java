@@ -26,11 +26,14 @@ package day6;
 public class MethodLab5 {
 	
 	static int[] powerArray(int prod) {
+		
 		int[] poweredArr = new int[10];
+		
 		for(int i = 0; i < 10; i ++) {
 			poweredArr[i] = (i + 1)* prod;
 			System.out.print(poweredArr[i] + (i != 9 ? ",":"\n" ));
 		}
+		
 		return poweredArr;
 	}
 	
