@@ -111,8 +111,6 @@ Ex.
 
 @왼쪽 줄맞춤해라. 5개의 십진법 정수가 들어간다. 빈공간은 0으로 채운다
 
-
-
 # Scanner Class
 
 Setup:
@@ -149,7 +147,11 @@ Some methods:
 
 - Instance methods can be accessed *ONLY* by instance methods! Class(static) methods do not have access to instance methods.
 
-***Why?*** This is because class methods ***do not have reference*** to instance methods, unlike the vice versa!
+***Why?***
+
+- 인스턴스변수는 인스턴스가 반드시 존재해야만 사용할 수 있는데, 클래스메서드(static이 붙은 메서드)는 인스턴스 생성 없이 호출가능하므로 **클래스 메서드가 호출되었을때 인스턴스가 존재하지 않을 수도 있다**. 그래서 클래스 메서드에서 인스턴스변수 사용을 금지한다.
+
+- This is because class methods ***do not have reference*** to instance methods, unlike the vice versa!
 
 # Overloading
 
@@ -170,7 +172,38 @@ Okay, what is constructor
 - Cool Facts
   - it's possible to have multiple constructors
   - when one constructor calls another constructor, it must be done with this keyword like this: 
-    - this(type var, type var2)..
+    - this(type var, type var2)..\
+
+# Inheritance
+
+Terms:
+
+​	조상 클래스 - 부모(parent) 클래스, 상위(super) 클래스, 기반(base) 클래스
+
+​	자손 클래스 - 자식(child)클래스, 하위(sub) 클래스, 파생된(derived) 클래스
+
+Some rules:
+
+- constructors and initialization blocks do not get passed down. But only the members.
+- sub class always has either the same or more members than the ancestor class.
+
+# Composition
+
+##### can be summarized as follows:
+
+```class Point { int x; int y;}```
+
+```class Circle {Point c = new Point(); int r;}``` 
+
+### Which relationship?!: 
+
+### Composite vs Inheritance
+
+Ask yourself:  **does Car have a wheel? Is a  Sports car a car?**
+
+상속관계 '~은 ~ 이다. (is-a)'
+
+포함관계 '~은 ~ 을 가지고 있다.(has-a)'
 
 # Array(배열)
 
@@ -245,3 +278,18 @@ public class lambda {
 }
 ```
 
+# ASCII
+
+### Good to Remember
+
+- 'A' : 65 -> 'a' : 97 
+- Capital and lowercase. Different by 32 !
+
+# Rounding
+
+Pattern 1:
+
+```Float.parseFloat(String.format("%.2f", 1/3f))```
+
+1. format the float argument (1/3f) into a string such that it's rounded to second decimal.
+2. parse the string of float into a float data type.
