@@ -12,9 +12,10 @@ public class Product {
 	}
 	
 	Product(){
-		this.name = "듀크인형";
-		this.balance = 5;
-		this.price = 10000;
+//		this.name = "듀크인형";
+//		this.balance = 5;
+//		this.price = 10000;
+		this("듀크인형", 5, 10000);
 	}
 	
 	String getName() {

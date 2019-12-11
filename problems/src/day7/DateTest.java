@@ -5,7 +5,6 @@ import java.util.GregorianCalendar;
 public class DateTest {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Date d = new Date();
 		System.out.println(d.toString());
 		GregorianCalendar gc = new GregorianCalendar();
