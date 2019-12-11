@@ -111,6 +111,24 @@ Ex.
 
 @왼쪽 줄맞춤해라. 5개의 십진법 정수가 들어간다. 빈공간은 0으로 채운다
 
+
+
+# Scanner Class
+
+Setup:
+
+```java.util.Scanner```
+
+```Scanner scanner = new Scanner(System.in);```
+
+Some methods:
+
+```scanner.next()``` takes out all the string until the first space. Afterwards, it places cursor in the same line where it left off.
+
+```scanner.nextInt()``` takes out integer string until the first blank point and coverts it to int
+
+```scanner.nextLine() ```reads all the strings until the end of the line. Afterwards, it places cursor in the next line beneath the line it left off.
+
 # OOP
 
 ## 객체의 구성요소
