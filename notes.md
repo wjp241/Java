@@ -109,7 +109,7 @@ Ex.
 
 ``` System.out.printf("finger = [%05d] %n", finger) -> finger =[00010] ```
 
-@왼쪽 줄맞춤해라. 5개의 십진법 정수가 들어간다. 빈공간은 0으로 채운다
+@왼쪽 줄맞춤해라. 5개의 십진법 정수가 들어간다. 빈공간은 0으로 채운다\\
 
 # Scanner Class
 
@@ -126,6 +126,29 @@ Some methods:
 ```scanner.nextInt()``` takes out integer string until the first blank point and coverts it to int
 
 ```scanner.nextLine() ```reads all the strings until the end of the line. Afterwards, it places cursor in the next line beneath the line it left off.
+
+##### Some methods to refer to later ....
+
+``` java
+public class ScannerClassExample2 {    
+      public static void main(String args[]){                       
+          String str = "Hello/This is JavaTpoint/My name is Abhishek.";  
+          //Create scanner with the specified String Object  
+          Scanner scanner = new Scanner(str);  
+          System.out.println("Boolean Result: "+scanner.hasNextBoolean());            
+          //Change the delimiter of this scanner  
+          scanner.useDelimiter("/");  
+          //Printing the tokenized Strings  
+          System.out.println("---Tokenizes String---");   
+        while(scanner.hasNext()){  
+            System.out.println(scanner.next());  
+        }  
+          //Display the new delimiter  
+          System.out.println("Delimiter used: " +scanner.delimiter());            
+          scanner.close();  
+          }    
+}  
+```
 
 # OOP
 
