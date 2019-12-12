@@ -27,7 +27,7 @@ interface GetRandomInt {
 
 public class MethodLab3 {
 	
-	 static int getRandom(int n) {
+	 public static int getRandom(int n) {
 		 return (int)(Math.random() * n  + 1);
 	 }
 	

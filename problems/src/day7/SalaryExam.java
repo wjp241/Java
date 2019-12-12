@@ -1,4 +1,5 @@
 package day7;
+import day6.MethodLab3;
 //1~12의 난수, 1~4의 난수를 추출하여 각각
 //month 변수와 grade 변수에 저장한다.
 //month : 월 정보
@@ -13,21 +14,15 @@ package day7;
 //- 출력 형식 : “..... 월 ..... 등급의 월급은 ..... 입니다.” 
 
 public class SalaryExam {
-	
-	public static void main(String[] args) {
-		int month = (int)(Math.random() * 12 + 1);
-		int grade = (int)(Math.random() * 4 + 1);
-		
-		SalaryExpr salaryExpr;
-		
-		if(month %2 == 0) {
-			salaryExpr =  new SalaryExpr(100);
 
-		} else {
-			salaryExpr = new SalaryExpr();
-		}
+	public static void main(String[] args) {
+		int month = MethodLab3.getRandom(12);
+		int grade =MethodLab3.getRandom(4);
 		
-		System.out.printf("%d월 %d등급의 월급은 %d 입니다", month, grade, salaryExpr.getSalary(grade));
+		SalaryExpr salaryExpr = month%2 == 0? (new SalaryExpr(100)) : ( new SalaryExpr());
+		int salary = salaryExpr.getSalary(grade);
+		
+		System.out.printf("%d월 %d등급의 월급은 %d 입니다", month, grade, salary);
 	}
 
 }
