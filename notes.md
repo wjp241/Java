@@ -1,4 +1,4 @@
-# Java
+# Infinite Scroll Note for Java
 
 # Overall Process(Coding-to-Running)
 
@@ -259,7 +259,9 @@ score[1] = new int[3];
 
 # Lambda
 
-One actually useful example to answer the question: "How does function/method parameters work in Java?" :
+One actually useful example to answer the question: 
+
+**"How does function/method parameters work in Java?" :**
 
 ``` java
 interface MyFunction {
@@ -316,3 +318,50 @@ Pattern 1:
 
 1. format the float argument (1/3f) into a string such that it's rounded to second decimal.
 2. parse the string of float into a float data type.
+
+# Modifier
+
+final - immutable - cannot be modified
+
+default - The code is only accessible in the same package. 
+
+​	[제어자] class 클래스명 extends 부모클래스명 {
+
+​		[제어자]멤버변수 선언
+
+​		[제어자]생성자 메서드 정의
+
+​		[제어자]메서드 정의
+
+}
+
+public, final, abstract class 클래스명 extends 부모클래스명 {
+
+​	모든접근제어자, final, static 멤버변수 선언
+
+
+
+​	모든접근제어자 static, final, abstract 메서드 정의
+
+}
+
+#### Rules
+
+- 활용제어자는 여러개 쓸수있음.
+
+- 접근제어자는 하나만 쓸수있음.
+- 클래스에는 접근제어자를 두가지만 설정가능: public, 아무것도 지정안하면 : (default)
+  - public 클래스: 누구나 (따로 자신의 동일한 이름의 소스에 있어야함)
+  - default 클래스 : 동일 패키지내의 클래스
+  - final 클래스 : 자손에 의해 상속불가한 클래스, 더이상 확장할 기능이 없는 클래스, 객체 생성은 가능!
+  - abstract 클래스 : 객체 생성불가! 상속만 가능, 객체생성못함, 이 클래스의 자손 클래스는 객체생성 가능.
+
+-  final - 변경할수없는, 마지막의
+
+- abstract - 미정의, 나중에 변경되어야할 ,마지막이 아닌, 미완성의
+
+  
+
+  protected - 동일패키지 이거나 (동일/다른 패키지이던) 자손이면 접근 가능, 객체생성으로는 접근 x.
+
+  
