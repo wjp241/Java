@@ -22,32 +22,47 @@ public class ScannerLab1 {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("첫 번째 숫자를 입력하세요 :");
-		int firstInt =scanner.nextInt();
-		System.out.println("두 번째 숫자를 입력하세요 :");
-		int secondInt=scanner.nextInt();
-		scanner.nextLine();
-		System.out.println("연산자(+, -, *, /)를 입력하세요 :");
-		String mathOperator = scanner.nextLine();
 		
-		int result = 0;
-		switch(mathOperator) {
-		case "+":
-			result = firstInt + secondInt;
-			break;
-		case "-":
-			result = Math.abs(firstInt - secondInt);
-			break;
-		case "/":
-			result= firstInt > secondInt ? (firstInt/secondInt) :(secondInt/firstInt);
-			break;
-		case "*":
-			result = firstInt * secondInt;
-			break;
+		int firstInt;
+		int secondInt;
+		int result;
+		int shouldContinue;
+		String mathOperator;
+		
+		while(true) {
+			System.out.println("첫 번째 숫자를 입력하세요 :");
+			 firstInt =scanner.nextInt();
+			System.out.println("두 번째 숫자를 입력하세요 :");
+			secondInt=scanner.nextInt();
+			scanner.nextLine();
+			System.out.println("연산자(+, -, *, /)를 입력하세요 :");
+			mathOperator = scanner.nextLine();
+			
+			result = 0;
+			switch(mathOperator) {
+			case "+":
+				result = firstInt + secondInt;
+				break;
+			case "-":
+				result = Math.abs(firstInt - secondInt);
+				break;
+			case "/":
+				result= firstInt > secondInt ? (firstInt/secondInt) :(secondInt/firstInt);
+				break;
+			case "*":
+				result = firstInt * secondInt;
+				break;
+			}
+			
+			System.out.printf("%d 와 %d의 %s 연산 결과는 %d 입니다\n", firstInt, secondInt, mathOperator, result);
+			System.out.println("반복을 원하시면 1을 눌러주세요");
+			shouldContinue = scanner.nextInt();
+			if(shouldContinue != 1) {
+				scanner.close();
+				break;
+			}
 		}
-		
-		System.out.printf("%d 와 %d의 %s 연산 결과는 %d 입니다", firstInt, secondInt, mathOperator, result);
-		scanner.close();
+
 	}
 
 }
