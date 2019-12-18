@@ -3,7 +3,7 @@ package day9;
 public class BookTest {
 
 	public static void main(String[] args) {
-		Book book1 = new Book("bookA", "authorA", 1000);
+		Book book1 = new Book("bookA", "authorA", 1000000);
 		book1.printBookInfo();
 		Book book2 = new Book("bookB", "authorB", 2000);
 		book2.printBookInfo();
