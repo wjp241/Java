@@ -3,11 +3,14 @@ package day13;
 import java.util.ArrayList;
 
 public  class CreateList {
-	public static ArrayList<Integer> convertList(int array[]){
-		ArrayList<Integer> list = new ArrayList<>();
-		for(int num:array) {
-			list.add(num);
+	ArrayList<Integer> list = new ArrayList<Integer>();
+	
+	public  ArrayList<Integer> convertList(int array[]){
+		for(int i = array.length - 1; i >= 0; i--) {
+			list.add(array[i]);
 		}
 		return list;
 	}
 }
+
+
