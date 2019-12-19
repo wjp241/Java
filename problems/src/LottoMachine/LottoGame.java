@@ -22,6 +22,7 @@ public class LottoGame {
 			// 예외가 발생하면 예외 메시지(“중복된 로또 번호가 발생했습니다”)를 출력하고 종료한다.
 			System.out.println(e.getMessage());
 		}
+		
 
 	}
 
